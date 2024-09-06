@@ -1,0 +1,27 @@
+{
+  "name": "labs1and2",
+  "version": "1.0.0",
+  "description": "Lab 1 and 2 in LPNU of course Web programming",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktor-kindrat/web-lab-1-2.git"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "Viktor Kindrat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktor-kindrat/web-lab-1-2/issues"
+  },
+  "homepage": "https://github.com/viktor-kindrat/web-lab-1-2#readme",
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}

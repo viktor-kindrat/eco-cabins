@@ -1,0 +1,444 @@
+/*fonts connection*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*variables START*/
+
+:root {
+    --plain-text-size: calc(8px + .5vw);
+    --big-text-size: calc(9px + .5vw);
+    --bigger-text-size: calc(12px + .6vw);
+    --h1-size: calc(26px + .8vw);
+    --h2-size: calc(28px + .8vw);
+    --h3-size: calc(12px + .8vw);
+    --desktop-padding: 35px 100px;
+}
+
+/*variables END*/
+
+.wrap {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/*action button START*/
+
+.action-btn {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.action-btn-text {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    text-align: center;
+}
+
+.action-btn_filled {
+    background: #ffffff;
+}
+
+.action-btn_filled .action-btn-text {
+    color: #606B74;
+}
+
+.action-btn_outline {
+    background: transparent;
+    border: 2px solid #646D70;
+}
+
+.action-btn_outline .action-btn-text {
+    font-weight: 500;
+    color: #606B74;
+}
+
+/*action button END*/
+
+/*header styles START*/
+
+.header {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--desktop-padding);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    gap: 25px;
+}
+
+.header__logo {
+    height: 25px;
+    max-width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header__logo-img {
+    object-fit: contain;
+    height: 25px;
+    max-width: 100%;
+}
+
+.header__nav {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 45px;
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.header__nav-list-item {
+
+}
+
+.header__nav-list-link {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*header styles END*/
+
+
+
+/*main styles START*/
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*home styles START*/
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--desktop-padding);
+    padding-top: 140px;
+    position: relative;
+    gap: 25px;
+}
+
+.home * {
+    z-index: 1;
+}
+
+.home__background {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    filter: brightness(0.9) contrast(1.2);
+    opacity: 0.9;
+    background: #606B74;
+}
+
+.home__heading-group {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+
+.home__heading-subtext {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--bigger-text-size);
+    line-height: 120%;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.home__headline {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: var(--h1-size);
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.home__video-control-group {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__text-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home__play-btn {
+    height: calc(30px + .8vw);
+    aspect-ratio: 1/1;
+    padding: 13px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.home__btn-caption {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    color: #FFFFFF;
+    padding: 35px 0;
+}
+
+/*home styles END*/
+
+
+/*material styles START*/
+.material {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    gap: 50px;
+}
+
+.material__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.material__section {
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.material__headline {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: var(--h2-size);
+    line-height: 38px;
+    color: #222F33;
+}
+
+.material__text {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--big-text-size);
+    line-height: 180%;
+    color: #646D70;
+}
+
+.material .action-btn {
+    padding: 10px 15px;
+}
+
+.material__image {
+    width: 355px;
+    object-fit: contain;
+    height: calc(100% + 70px);
+}
+
+/*material styles END*/
+
+/*innovative styles START*/
+.innovative {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    background: #26353B;
+    padding: 60px 100px;
+}
+
+.innovative__headline {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: var(--h2-size);
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+.innovative__text {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--plain-text-size);
+    line-height: 180%;
+    color: #FFFFFF;
+    opacity: 0.7;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 45px;
+}
+
+/*innovative styles END*/
+
+/*features START*/
+
+.features {
+    padding: var(--desktop-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+    min-height: 100vh;
+}
+
+.features__img {
+    height: 100%;
+    width: 45%;
+    object-fit: cover;
+}
+
+.features__content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.features__row {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 30px));
+    gap: 60px;
+}
+
+.features__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.features__headline {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: var(--h3-size);
+    line-height: 23px;
+    color: #222F33;
+}
+
+.features__text {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--plain-text-size);
+    line-height: 180%;
+    color: #646D70;
+    opacity: 0.7;
+}
+
+/*features END*/
+
+
+/*footer START*/
+
+.footer {
+    background: #222F33;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 50px;
+}
+
+.footer__email {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    color: #FFFFFF;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.footer__logo {
+    height: 26px;
+}
+
+.footer__nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer__nav-link {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    text-align: right;
+    color: #FFFFFF;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+
+/*footer END*/
+
+/*main styles END*/
