@@ -1,0 +1,83 @@
+/*fonts connection*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*variables START*/
+
+:root {
+    --plain-text-size: calc(8px + .5vw);
+    --big-text-size: calc(9px + .5vw);
+    --bigger-text-size: calc(12px + .6vw);
+    --h1-size: calc(26px + .8vw);
+    --h2-size: calc(28px + .8vw);
+    --h3-size: calc(12px + .8vw);
+    --screen-padding: 35px 100px;
+    --logo-height: calc(12px + 1.3vw)
+}
+
+/*variables END*/
+
+.wrap {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*action button START*/
+
+.action-btn {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
+.action-btn-text {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    text-align: center;
+}
+
+.action-btn_filled {
+    background: #ffffff;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.action-btn_filled .action-btn-text {
+    color: #606B74;
+}
+
+.action-btn_outline {
+    background: transparent;
+    border: 2px solid #646D70;
+}
+
+.action-btn_outline .action-btn-text {
+    font-weight: 500;
+    color: #606B74;
+}
+
+/*action button END*/
+
+@media screen and (max-width: 700px) {
+    :root {
+        --plain-text-size: 12px;
+    }
+}
+
+@media screen and (max-width: 928px) {
+    :root {
+        --screen-padding: 25px;
+    }
+}

@@ -1,0 +1,130 @@
+/*header styles START*/
+
+.header {
+    width: 100vw;
+    max-width: 2560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--screen-padding);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    gap: 25px;
+}
+
+.header__logo {
+    height: var(--logo-height);
+    max-width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header__logo-img {
+    object-fit: contain;
+    height: var(--logo-height);
+    max-width: 100%;
+}
+
+.header__nav {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 45px;
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.header__nav-list-item {
+    position: relative;
+}
+
+.header__nav-list-item::after {
+    content: "";
+    display: block;
+    height: 2px;
+    border-radius: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s 0.2s;
+}
+
+.header__nav-list-item:hover::after {
+    width: 90%;
+}
+
+.header__nav-list-link {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header__burger-btn {
+    display: none;
+}
+
+/*header styles END*/
+
+@media screen and (max-width: 700px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__burger-btn {
+        height: 15px;
+        width: 25px;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .header__burger-bullet,
+    .header__burger-btn::before,
+    .header__burger-btn::after {
+        width: 65%;
+        height: 2px;
+        background: #FFFFFF;
+        display: block;
+    }
+
+    .header__burger-btn::before,
+    .header__burger-btn::after {
+        width: 100%;
+        content: "";
+        position: absolute;
+    }
+
+    .header__burger-btn::before {
+        top: 0;
+    }
+
+    .header__burger-btn::after {
+        bottom: 0;
+    }
+}

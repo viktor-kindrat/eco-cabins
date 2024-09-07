@@ -1,0 +1,128 @@
+/*home styles START*/
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--screen-padding);
+    padding-top: 140px;
+    position: relative;
+    gap: 25px;
+    background: #606B74;
+}
+
+.home * {
+    z-index: 1;
+}
+
+.home__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.home__heading-group {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+
+.home__heading-subtext {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--bigger-text-size);
+    line-height: 120%;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.home__headline {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: var(--h1-size);
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.home__video-control-group {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__text-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home__play-btn {
+    height: calc(30px + .8vw);
+    aspect-ratio: 1/1;
+    padding: 13px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform: translateY(0);
+}
+
+.home__play-btn:active {
+    transform: translateY(3px);
+}
+
+.home__play-icon {
+    height: 10px;
+    object-fit: contain;
+}
+
+.home__btn-caption {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--plain-text-size);
+    line-height: 120%;
+    color: #FFFFFF;
+    padding: 35px 0;
+}
+
+/*home styles END*/
+
+@media screen and (max-width: 700px) {
+    .home {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home__heading-group {
+        width: 100%;
+    }
+
+    .home__video-control-group {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
