@@ -5,7 +5,7 @@
 
 :root {
     --plain-text-size: calc(8px + .5vw);
-    --big-text-size: calc(9px + .5vw);
+    --big-text-size: calc(10px + .5vw);
     --bigger-text-size: calc(12px + .6vw);
     --h1-size: calc(26px + .8vw);
     --h2-size: calc(28px + .8vw);
