@@ -50,27 +50,41 @@
 
 .material__image {
     width: 355px;
-    object-fit: contain;
-    height: calc(100% + 70px);
+    object-fit: cover;
+    height: calc(350px + 5vw + 5vh);
 }
 
 /*material styles END*/
 
+@media screen and (min-width: 2560px) {
+    .material__content {
+        width: 60%;
+    }
+
+    .material__image {
+        width: 40%;
+        aspect-ratio: 4/5;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 928px) {
     .material {
-        padding: var(--screen-padding);
+        padding: 0 var(--screen-padding);
     }
 }
 
 @media screen and (max-width: 700px) {
     .material {
         flex-direction: column;
+        padding: var(--screen-padding);
     }
 
     .material__image {
         order: -1;
         width: 100%;
-        max-height: 35vh;
+        max-height: 38vh;
+        object-position: center center;
     }
 
     .material__content {
