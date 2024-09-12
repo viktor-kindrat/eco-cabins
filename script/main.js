@@ -1,8 +1,8 @@
-let videoButton = document.getElementById("main-video-button")
+let videoButton = document.getElementById("main-video-button");
+
 
 videoButton.addEventListener("click", (e) => {
     let videoElement = document.getElementById("main-video-element")
-    console.log("OK")
 
     videoElement.volume = "0.5"
 
@@ -16,3 +16,9 @@ videoButton.addEventListener("click", (e) => {
         videoElement.pause()
     }
 })
+
+let headerBurgerButton = document.querySelector(".header__burger-btn");
+headerBurgerButton.addEventListener("click", () => {
+    headerBurgerButton.classList.toggle("header__burger-btn_active");
+    document.querySelector(".header__nav").classList.toggle("header__nav_active")
+});
